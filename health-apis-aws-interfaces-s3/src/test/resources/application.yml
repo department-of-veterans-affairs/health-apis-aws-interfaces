@@ -1,0 +1,5 @@
+amazon.s3:
+  clientRegion: "us-east-1"
+  serviceEndpoint: "http://localhost:9090"
+  accessKey: foo
+  secretKey: bar
