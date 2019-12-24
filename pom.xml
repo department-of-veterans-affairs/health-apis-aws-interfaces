@@ -7,7 +7,7 @@
     <version>4.0.4</version>
   </parent>
   <artifactId>health-apis-aws-interfaces</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
     <module>health-apis-aws-interfaces-s3</module>
