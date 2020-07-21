@@ -15,9 +15,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @EnableAutoConfiguration
 @ContextConfiguration(
-  classes = {AmazonS3ClientServiceConfig.class},
-  initializers = ConfigFileApplicationContextInitializer.class
-)
+    classes = {AmazonS3ClientServiceConfig.class},
+    initializers = ConfigFileApplicationContextInitializer.class)
 public class AmazonS3ClientServiceConfigTest {
 
   @Autowired private AmazonS3ClientServiceInterface service;

@@ -17,13 +17,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /** Test a session client can be created via configuration properties. */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-  classes = {AmazonS3SessionClientServiceTest.TestConfiguration.class},
-  initializers = ConfigFileApplicationContextInitializer.class
-)
+    classes = {AmazonS3SessionClientServiceTest.TestConfiguration.class},
+    initializers = ConfigFileApplicationContextInitializer.class)
 @TestPropertySource(
-  locations = "classpath:application.yml",
-  properties = {"amazon.s3.clientType: session", "amazon.s3.sessionDuration: 7200"}
-)
+    locations = "classpath:application.yml",
+    properties = {"amazon.s3.clientType: session", "amazon.s3.sessionDuration: 7200"})
 public class AmazonS3SessionClientServiceTest {
 
   @Autowired private AmazonS3ClientConfig config;

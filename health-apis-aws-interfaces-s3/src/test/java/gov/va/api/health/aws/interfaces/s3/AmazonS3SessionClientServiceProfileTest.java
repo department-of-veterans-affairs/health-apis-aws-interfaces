@@ -17,13 +17,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /** Test a nominally configured session client configuration using profiles. */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-  classes = {AmazonS3SessionClientServiceTest.TestConfiguration.class},
-  initializers = ConfigFileApplicationContextInitializer.class
-)
+    classes = {AmazonS3SessionClientServiceTest.TestConfiguration.class},
+    initializers = ConfigFileApplicationContextInitializer.class)
 @TestPropertySource(
-  locations = "classpath:application.yml",
-  properties = {"amazon.s3.clientType: session"}
-)
+    locations = "classpath:application.yml",
+    properties = {"amazon.s3.clientType: session"})
 public class AmazonS3SessionClientServiceProfileTest {
 
   @Autowired private AmazonS3ClientConfig config;

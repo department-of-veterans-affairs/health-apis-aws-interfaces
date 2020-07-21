@@ -26,7 +26,11 @@ public final class AmazonS3BucketUtilities {
   public static String getResultFromS3(final AmazonS3 s3Client, final String bucketName) {
     final ListObjectsV2Result result = s3Client.listObjectsV2(bucketName);
     final List<S3ObjectSummary> objects = result.getObjectSummaries();
-    assertEquals(1, objects.size());
+    try {
+      assertEquals(1, objects.size());
+    } catch (Exception ex) {
+      throw new RuntimeException(ex);
+    }
     final String objectKey = objects.get(0).getKey();
     S3Object obj = s3Client.getObject(bucketName, objectKey);
     final String resultString = IOUtils.toString(obj.getObjectContent(), StandardCharsets.UTF_8);

@@ -12,9 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /** Test loading configuration from properties and forcefully testing a bad configuration. */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-  classes = AmazonS3ClientConfigTest.TestConfiguration.class,
-  initializers = ConfigFileApplicationContextInitializer.class
-)
+    classes = AmazonS3ClientConfigTest.TestConfiguration.class,
+    initializers = ConfigFileApplicationContextInitializer.class)
 public class AmazonS3ClientConfigTest {
 
   @Autowired private AmazonS3ClientConfig config;

@@ -12,9 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /** Forcefully test a badly configured simple client. */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-  classes = {AmazonS3SimpleClientServiceBadConfigTest.TestConfiguration.class},
-  initializers = ConfigFileApplicationContextInitializer.class
-)
+    classes = {AmazonS3SimpleClientServiceBadConfigTest.TestConfiguration.class},
+    initializers = ConfigFileApplicationContextInitializer.class)
 public class AmazonS3SimpleClientServiceBadConfigTest {
 
   @Autowired private AmazonS3ClientConfig config;
