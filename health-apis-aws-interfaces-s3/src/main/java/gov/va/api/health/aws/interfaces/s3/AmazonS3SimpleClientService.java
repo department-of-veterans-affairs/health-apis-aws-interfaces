@@ -21,10 +21,9 @@ import org.springframework.util.Assert;
  */
 @Service
 @ConditionalOnProperty(
-  value = "amazon.s3.clientType",
-  matchIfMissing = true,
-  havingValue = "simple"
-)
+    value = "amazon.s3.clientType",
+    matchIfMissing = true,
+    havingValue = "simple")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
 @Slf4j
 public class AmazonS3SimpleClientService

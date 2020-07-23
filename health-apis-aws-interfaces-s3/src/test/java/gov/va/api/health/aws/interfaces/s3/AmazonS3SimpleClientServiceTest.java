@@ -14,9 +14,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /** Test a simple client can be instantiated without an endpoint. */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-  classes = {AmazonS3SimpleClientServiceTest.TestConfiguration.class},
-  initializers = ConfigFileApplicationContextInitializer.class
-)
+    classes = {AmazonS3SimpleClientServiceTest.TestConfiguration.class},
+    initializers = ConfigFileApplicationContextInitializer.class)
 public class AmazonS3SimpleClientServiceTest {
 
   @Autowired private AmazonS3ClientConfig config;
