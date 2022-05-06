@@ -4,11 +4,14 @@
   <parent>
     <groupId>gov.va.api.health</groupId>
     <artifactId>health-apis-parent</artifactId>
-    <version>7.0.2</version>
+    <version>11.0.0</version>
   </parent>
   <artifactId>health-apis-aws-interfaces</artifactId>
   <version>2.0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <properties>
+    <github.repository-name>health-apis-aws-interfaces</github.repository-name>
+  </properties>
   <modules>
     <module>health-apis-aws-interfaces-s3</module>
     <module>health-apis-aws-interfaces-s3-mock</module>

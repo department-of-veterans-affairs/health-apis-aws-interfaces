@@ -10,6 +10,7 @@
   <artifactId>health-apis-aws-interfaces-s3-mock</artifactId>
   <packaging>jar</packaging>
   <properties>
+    <github.repository-name>health-apis-aws-interfaces</github.repository-name>
     <aws-java-sdk.version>1.11.592</aws-java-sdk.version>
     <commons-io.version>2.6</commons-io.version>
   </properties>

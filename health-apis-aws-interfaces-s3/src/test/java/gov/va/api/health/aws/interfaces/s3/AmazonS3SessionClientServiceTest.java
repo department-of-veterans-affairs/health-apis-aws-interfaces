@@ -3,22 +3,22 @@ package gov.va.api.health.aws.interfaces.s3;
 import static org.junit.Assert.assertNotNull;
 
 import gov.va.api.health.aws.interfaces.s3.mock.AmazonS3SessionClientServiceMock;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.test.context.ConfigFileApplicationContextInitializer;
+import org.springframework.boot.test.context.ConfigDataApplicationContextInitializer;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 /** Test a session client can be created via configuration properties. */
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(
     classes = {AmazonS3SessionClientServiceTest.TestConfiguration.class},
-    initializers = ConfigFileApplicationContextInitializer.class)
+    initializers = ConfigDataApplicationContextInitializer.class)
 @TestPropertySource(
     locations = "classpath:application.yml",
     properties = {"amazon.s3.clientType: session", "amazon.s3.sessionDuration: 7200"})
@@ -28,7 +28,7 @@ public class AmazonS3SessionClientServiceTest {
 
   private AmazonS3SessionClientServiceMock service;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     service = new AmazonS3SessionClientServiceMock(config);
     service.afterPropertiesSet();
