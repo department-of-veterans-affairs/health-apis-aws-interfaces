@@ -1,0 +1,22 @@
+#
+# To Onboard with Daedalus, copy this file to your project's .github/workflows directory.
+# Then run this workflow from GitHub Actions.
+# To override the sync type (defaults to maven), add the following to synchronize:
+# with:
+#   synchronize-type: argocd-deployment | maven | shell
+#
+
+# Managed by Daedalus
+name: Daedalus
+on:
+  workflow_dispatch:
+  schedule:
+    # At 05:00 on Monday
+    - cron: '0 5 * * 1'
+
+jobs:
+  synchronize:
+    name: Synchronizer
+    uses: department-of-veterans-affairs/lighthouse-daedalus/.github/workflows/synchronizer.yml@master
+    secrets: inherit
+
