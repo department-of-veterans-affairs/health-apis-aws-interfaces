@@ -12,7 +12,7 @@
   <properties>
     <github.repository-name>health-apis-aws-interfaces</github.repository-name>
     <aws-java-sdk.version>1.11.592</aws-java-sdk.version>
-    <commons-io.version>2.6</commons-io.version>
+    <commons-io.version>2.7</commons-io.version>
   </properties>
   <dependencies>
     <dependency>
